@@ -15,7 +15,7 @@ import com.example.androiddevkotlin.R
  * create an instance of this fragment.
  */
 class SearchFragment : Fragment() {
-     override fun onCreateView(
+    override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
