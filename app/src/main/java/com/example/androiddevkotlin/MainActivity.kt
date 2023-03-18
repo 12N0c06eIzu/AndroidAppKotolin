@@ -12,7 +12,7 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        //
+
         val bottom_nav: BottomNavigationView = findViewById(R.id.bottom_nav)
         // navFragmentContainerViewの設定
         val navController = findNavController(R.id.navFragmentContainerView)
