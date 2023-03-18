@@ -13,7 +13,5 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
 
     <!-- SubActivity -->
-
-    <!-- Util -->
-    <string name="dev_button">開発中</string>
+    <string name="SubButton">戻る</string>
 </resources>
