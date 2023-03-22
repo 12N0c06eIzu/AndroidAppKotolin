@@ -7,8 +7,9 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
+import android.widget.Toast
 import com.example.androiddevkotlin.R
-import com.example.androiddevkotlin.SubActivity
+import com.example.subActivity.SubActivity
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -42,9 +43,14 @@ class MessageFragment : Fragment() {
 
         val buttonA: Button = view.findViewById(R.id.button_a)
         buttonA.setOnClickListener {
+            Toast.makeText(context, "create activity", Toast.LENGTH_SHORT).show()
             startSubActivity()
         }
 
+        val buttonB: Button = view.findViewById(R.id.button_b)
+        buttonB.setOnClickListener{
+            Toast.makeText(context, "buttonB", Toast.LENGTH_LONG).show()
+        }
         return view
     }
 
@@ -53,7 +59,7 @@ class MessageFragment : Fragment() {
      */
     private fun startSubActivity() {
         // 遷移先Activityを指定したIntentを作成
-        val intent = Intent(context,SubActivity::class.java)
+        val intent = Intent(context, SubActivity::class.java)
         // Activityを起動
         startActivity(intent)
     }

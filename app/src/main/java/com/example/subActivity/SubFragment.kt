@@ -1,14 +1,13 @@
 package com.example.subActivity
 
-import android.annotation.SuppressLint
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
+import android.widget.Toast
 import com.example.androiddevkotlin.R
-import com.example.androiddevkotlin.R.*
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -33,20 +32,12 @@ class SubFragment : Fragment() {
         }
     }
 
-    @SuppressLint("MissingInflatedId")
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        val subView = inflater.inflate(layout.fragment_sub, container, false)
-        // @SuppressLint("MissingInflatedId") これを付けないとfindViewByIdがエラーを吐く
-        val returnButton: Button = subView.findViewById(R.id.sub_button_a)
-        returnButton.setOnClickListener{
-            // finish() 自体が呼び出せないので、ここ正しいかまったくもって不明
-            // onDestroy()を使おうとしてました。
-            // finish()
-        }
+        val subView = inflater.inflate(R.layout.fragment_sub, container, false)
         return subView
     }
 

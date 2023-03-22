@@ -10,7 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AndroidDevKotlin">
         <activity
-            android:name=".SubActivity"
+            android:name="com.example.subActivity.SubActivity"
             android:exported="false" />
         <activity
             android:name=".MainActivity"
