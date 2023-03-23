@@ -2,6 +2,9 @@ package com.example.androiddevkotlin
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
+import android.widget.Button
+import android.widget.Toast
 import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.setupActionBarWithNavController
@@ -12,8 +15,8 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        //
-        val bottom_nav: BottomNavigationView = findViewById(R.id.bottom_nav)
+
+        val bottomNav: BottomNavigationView = findViewById(R.id.bottom_nav)
         // navFragmentContainerViewの設定
         val navController = findNavController(R.id.navFragmentContainerView)
         setupActionBarWithNavController(
@@ -29,6 +32,6 @@ class MainActivity : AppCompatActivity() {
                 )
             )
         )
-        bottom_nav.setupWithNavController(navController)
+        bottomNav.setupWithNavController(navController)
     }
 }
